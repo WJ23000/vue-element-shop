@@ -2,34 +2,28 @@
 
 import Layout from '@/views/layout/Layout'
 
-const tableRouter = {
-  path: '/table',
+const goodsRouter = {
+  path: '/goods',
   component: Layout,
   redirect: '/table/complex-table',
-  name: 'Table',
+  name: 'Goods',
   meta: {
-    title: '用户',
+    title: '商品',
     icon: 'table'
   },
   children: [
     {
-      path: 'user-table',
-      component: () => import('@/views/table/userTable'),
-      name: 'UserTable',
-      meta: { title: '用户列表' }
-    },
-    {
       path: 'goods-table',
-      component: () => import('@/views/table/goodsTable'),
+      component: () => import('@/views/goods/goodsTable'),
       name: 'GoodsTable',
       meta: { title: '商品列表' }
     },
     {
       path: 'order-table',
-      component: () => import('@/views/table/orderTable'),
+      component: () => import('@/views/goods/orderTable'),
       name: 'OrderTable',
       meta: { title: '订单列表' }
     }
   ]
 }
-export default tableRouter
+export default goodsRouter

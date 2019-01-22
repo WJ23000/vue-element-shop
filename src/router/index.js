@@ -7,7 +7,8 @@ Vue.use(Router)
 import Layout from '@/views/layout/Layout'
 
 /* Router Modules */
-import tableRouter from './modules/table'
+import userRouter from './modules/user'
+import goodsRouter from './modules/goods'
 
 /** note: Submenu only appear when children.length>=1
  *  detail see  https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -56,8 +57,11 @@ export default new Router({
 })
 
 export const asyncRouterMap = [
-  /** （用户-表格 **/
-  tableRouter,
+  /** 用户-表格 **/
+  userRouter,
+
+  /** 商品-表格 **/
+  goodsRouter,
 
   {
     path: '/tab',
