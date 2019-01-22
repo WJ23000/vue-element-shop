@@ -8,45 +8,27 @@ const tableRouter = {
   redirect: '/table/complex-table',
   name: 'Table',
   meta: {
-    title: 'Table',
+    title: '用户',
     icon: 'table'
   },
   children: [
     {
-      path: 'dynamic-table',
-      component: () => import('@/views/table/dynamicTable/index'),
-      name: 'DynamicTable',
-      meta: { title: 'dynamicTable' }
+      path: 'user-table',
+      component: () => import('@/views/table/userTable'),
+      name: 'UserTable',
+      meta: { title: '用户列表' }
     },
     {
-      path: 'drag-table',
-      component: () => import('@/views/table/dragTable'),
-      name: 'DragTable',
-      meta: { title: 'dragTable' }
+      path: 'goods-table',
+      component: () => import('@/views/table/goodsTable'),
+      name: 'GoodsTable',
+      meta: { title: '商品列表' }
     },
     {
-      path: 'inline-edit-table',
-      component: () => import('@/views/table/inlineEditTable'),
-      name: 'InlineEditTable',
-      meta: { title: 'inlineEditTable' }
-    },
-    {
-      path: 'tree-table',
-      component: () => import('@/views/table/treeTable/treeTable'),
-      name: 'TreeTableDemo',
-      meta: { title: 'treeTable' }
-    },
-    {
-      path: 'custom-tree-table',
-      component: () => import('@/views/table/treeTable/customTreeTable'),
-      name: 'CustomTreeTableDemo',
-      meta: { title: 'customTreeTable' }
-    },
-    {
-      path: 'complex-table',
-      component: () => import('@/views/table/complexTable'),
-      name: 'ComplexTable',
-      meta: { title: 'complexTable' }
+      path: 'order-table',
+      component: () => import('@/views/table/orderTable'),
+      name: 'OrderTable',
+      meta: { title: '订单列表' }
     }
   ]
 }
