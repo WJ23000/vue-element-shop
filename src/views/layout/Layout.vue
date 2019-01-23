@@ -3,9 +3,13 @@
     <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
     <sidebar class="sidebar-container"/>
     <div class="main-container">
-      <navbar/>
-      <tags-view/>
-      <app-main/>
+      <div class="first-container">
+        <navbar/>
+        <tags-view/>
+      </div>
+      <div class="two-container">
+        <app-main/>
+      </div>
     </div>
   </div>
 </template>
@@ -49,6 +53,15 @@ export default {
 
 <style rel="stylesheet/scss" lang="scss" scoped>
   @import "~@/styles/mixin.scss";
+  .first-container{
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 100;
+  }
+  .two-container{
+    margin-top: 0px;
+  }
   .app-wrapper {
     @include clearfix;
     position: relative;
