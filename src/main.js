@@ -19,6 +19,11 @@ import './errorLog' // error log
 import './permission' // permission control
 import './mock' // simulation data
 
+// 使用axios请求方式
+import axios from 'axios'
+// 改为原型组件使用方式
+Vue.prototype.$http = axios
+
 import * as filters from './filters' // global filters
 
 Vue.use(Element, {
