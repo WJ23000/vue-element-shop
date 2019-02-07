@@ -60,7 +60,9 @@ module.exports = {
      * then assetsPublicPath should be set to "/bar/".
      * In most cases please use '/' !!!
      */
-    assetsPublicPath: '/',
+    //assetsPublicPath: '/',
+    //执行npm run build后的改动
+    assetsPublicPath: './',
 
     /**
      * Source Maps
